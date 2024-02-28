@@ -4,9 +4,20 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+// import routes
+const user = require("./controller/user");
+const shop = require("./controller/shop");
+const product = require("./controller/product");
+const event = require("./controller/event");
+const coupon = require("./controller/coupounCode");
+const payment = require("./controller/payment");
+const order = require("./controller/order");
+const conversation = require("./controller/conversation");
+const message = require("./controller/message");
+const withdraw = require("./controller/withdraw");
 
 app.use(cors({
-  origin: ['https://localhost:3000',],
+  origin: ['https://e-shopping-api-p89w.onrender.com/',],
   credentials: true
 }));
 
@@ -25,17 +36,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
   });
 }
 
-// import routes
-const user = require("./controller/user");
-const shop = require("./controller/shop");
-const product = require("./controller/product");
-const event = require("./controller/event");
-const coupon = require("./controller/coupounCode");
-const payment = require("./controller/payment");
-const order = require("./controller/order");
-const conversation = require("./controller/conversation");
-const message = require("./controller/message");
-const withdraw = require("./controller/withdraw");
+
 
 app.use("/api/v2/user", user);
 app.use("/api/v2/conversation", conversation);
