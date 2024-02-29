@@ -35,7 +35,7 @@ router.post("/create-user", async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `https://localhost:3000/activation/${activationToken}`;
+    const activationUrl = `https://e-shopping-api-p89w.onrender.com/activation/${activationToken}`;
 
     try {
       await sendMail({
