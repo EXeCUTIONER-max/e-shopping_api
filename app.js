@@ -17,7 +17,7 @@ const message = require("./controller/message");
 const withdraw = require("./controller/withdraw");
 
 app.use(cors({
-  origin: ['https://e-shopping-api-p89w.onrender.com/',],
+  origin: ['https://localhost:8000',],
   credentials: true
 }));
 
